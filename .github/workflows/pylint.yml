@@ -44,3 +44,9 @@ jobs:
       with:
         name: python-package-distributions
         path: dist/
+    - name: Test with pytest
+      run: |
+        pytest test.py
+        coverage run -m pytest test.py
+        coverage report
+
